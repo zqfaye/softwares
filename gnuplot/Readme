@@ -1,0 +1,12 @@
+Install gnuplot with Aquaterm
+
+First install Aquaterm: https://sourceforge.net/projects/aquaterm/  (from installing-package)
+Then link needed libraries and headers: (not sure if it is required for any system but did it)
+      sudo mkdir -p /usr/local/include/aquaterm
+      sudo ln -s /Library/Frameworks/AquaTerm.framework/Versions/A/AquaTerm /usr/local/lib/libaquaterm.dylib
+      sudo ln -s /Library/Frameworks/AquaTerm.framework/Versions/A/AquaTerm /usr/local/lib/libaquaterm.1.0.0.dylib
+      sudo ln -s /Library/Frameworks/AquaTerm.framework/Versions/A/Headers/* /usr/local/include/aquaterm/.
+Third do:
+      brew install gnuplot --with-aquaterm
+   if gnuplot is already installed, do:
+      brew reinstall gnuplot --with-aquaterm 
